@@ -6,7 +6,15 @@
  
  > Authors: \<[Ased Karim](https://github.com/AsedK)\> <[Pu Sun](https://github.com/MtdMikuru1096)> \<[Daniel Velez](https://github.com/urfavoriteduckboi)\> \<[Tomoka Nakagawa](https://github.com/tnaka032)\>
  
- > Description:
+ > Description: The task scheduler will allow the user to input different tasks into a kanban schedule. The reason why we think this would be a great fit as a project is not only would it give us valuable experience but it is something that we can use well beyond after this class and remember that it was something that we individually created. our language will be c++. below is a sample input and out between the user and the program. 
+ > >**Enter the name of the task being entered**
+ > >Task 1
+ > >**What is the priority of this task Backlog, design, to do, doing, review, testing, done.**
+ > >doing
+ > >**Please add a note to task**
+ > >Fixing unexpected errors 
+ > >**The item “Task 1” has now been added to “doing” section**
+ 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list, start thinking about the features you will implement, what design patterns can help you implement them, and why. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). Your project needs to implement at least one design pattern iteratively, which you will have to justify in later phases.The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings. While Daily Scrums are not required we highly encourage you to practice them.
 
  
