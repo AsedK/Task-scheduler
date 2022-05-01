@@ -1,7 +1,7 @@
 
 # Task Scheduler
 
-  Authors: \<[Ased Karim](https://github.com/AsedK)\> <[Pu Sun](https://github.com/MtdMikuru1096)> \<[Daniel Velez](https://github.com/urfavoriteduckboi)\> \<[Tomoka Nakagawa](https://github.com/tnaka032)\>
+  Authors: [Ased Karim](https://github.com/AsedK), [Pu Sun](https://github.com/MtdMikuru1096), [Daniel Velez](https://github.com/urfavoriteduckboi), [Tomoka Nakagawa](https://github.com/tnaka032)
  
 ## Project Description
 Description: The task scheduler will allow the user to input different tasks into a kanban schedule. The reason why we think this would be a great fit as a project is not only would it give us valuable experience but it is something that we can use well beyond after this class and remember that it was   something that we individually created.\
