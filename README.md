@@ -55,6 +55,8 @@ Description: The task scheduler will allow the user to input different tasks int
  
  ## Screenshots
  > Screenshots of the input/output after running your application
+ > ![image](https://user-images.githubusercontent.com/99304188/166162817-c7fd3225-941f-4d3d-9841-d1dca5da01b5.png)
+
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
