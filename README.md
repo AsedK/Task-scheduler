@@ -27,8 +27,9 @@ Description: The task scheduler will allow the user to input different tasks int
  >     * How work will be divided between the team members
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
- 
+ > ![Blank diagram](https://user-images.githubusercontent.com/59095877/166174127-325d1f8e-fdf1-4162-b02f-56f9a86a6059.png)
+ > Description: The task list class is an aggregator for tasks, and has the functions of printing a menu for the user to interact with, adding/removing tasks from a  list, and printing the task list in order of date/if it's an extremely important task. The task class contains the public data members of title, details, date, done, top priority, and the next and previous task nodes. Title is the title of the task, details is the specific information of that task (can be left blank), date is the day that the task is due/happening, done is regarding whether or not the task is complete, top priority entails whether or not the task is extremely important (top priority is printed first in list), next and previous nodes are pointing to the nodes before and after the current task. (next and prev used for ordering) There are three subclasses, consisting of appointments, assignments/tests, and work-related tasks. Appointments has the extra member of type, relating to the kind of appointment (ex: Doctor's, insurance, dentist, etcetera). Study has the member of class which would show the class that the assignment or test was for in order to prioritize study or work for that particular class. (different from details as it would be shown earlier to allow for easier access for students) Work has the member of team in order to show what team has that particular task nd allows for the organizing of tasks by team. Final class included is a date class in order to compare dates and allow for prioritization by due date.
+ >  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
  > * Before the meeting you should perform a sprint plan like you did in Phase II.
@@ -55,7 +56,7 @@ Description: The task scheduler will allow the user to input different tasks int
  
  ## Screenshots
  > Screenshots of the input/output after running your application
- > ![image](https://user-images.githubusercontent.com/99304188/166162817-c7fd3225-941f-4d3d-9841-d1dca5da01b5.png)
+ 
 
  ## Installation/Usage
  > Instructions on installing and running your application
