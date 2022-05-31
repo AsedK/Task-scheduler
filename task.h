@@ -58,3 +58,12 @@ void setsubappointment();
 private:
 string appointment;
 };
+
+class subTask4:public Task{
+public:
+subTask4();
+string getsubTask();
+void setsubTask();
+private:
+string subTask;
+};

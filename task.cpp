@@ -102,3 +102,15 @@ subTask3::getsubcappointment(){
 void subTask3::setsubappointment(string slist3){
     appointment = slist3;
 }
+
+subTask4::subTask4(){
+   subTask = " ";
+}
+
+subTask4::getsubTask(){
+    return subTask;
+}
+
+void subTask4::setsubTask(string slist4){
+    subTask = slist4;
+}
