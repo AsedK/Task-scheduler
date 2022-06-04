@@ -131,7 +131,7 @@ void TaskList :: deleteCompleted(){
     }
 }
 
-void TaskList :: addtoList(){
+void TaskList::addToList(){
     string input == " ";
     while (input != "n"){
         string l1 = " ";
@@ -239,7 +239,7 @@ void TaskList :: addtoList(){
     }
 }
 
-void TaskList :: removeFromList(){
+void TaskList::removeFromList(){
     string r = " ";
     while(r != "n"){
         if(list.size() == 0){
@@ -260,7 +260,7 @@ void TaskList :: removeFromList(){
         cout << "Item #" << num << " deleted" << endl;
         cout << "Would you like to remove another task? (y/n)" << endl;
         cin >> r;
-        if(r == y){
+        if(r == "y"){
             cout << "Printing tasks..." << endl;
         }
         cin.clear();
@@ -328,9 +328,83 @@ void TaskList :: setComplete(){
 
         cout << "Would you like to mark another task as complete/incomplete? (y/n)" << endl;
         cin >> r;
-        if(r == y){
+        if(r == "y"){
             cout << "Printing tasks..." << endl;
         }
         cin.clear();
+    }
+}
+
+void TaskList :: printDetails(){
+    string r = " ";
+    while(r != "n"){
+        if(list.size() == 0){
+            cout << "List is empty, nothing to print."
+            return;
+        }
+        int num = 0;
+        printInOrder();
+        while ((num >= list.size()) || (num <= 0)){
+            cout << endl << "Which task's details would you like to print?" << endl;
+            cin >> num;
+            if((num <= 0) || (num >= list.size())){
+                cout << num << " is not within the values alotted, try again." << endl;
+            }
+            cin.clear();
+        }
+        cout << "Details: " << list.at(num - 1).getDetails();
+        cout << "Would you like to  another task? (y/n)" << endl;
+        cin >> r;
+        if(r == "y"){
+            cout << "Printing tasks..." << endl;
+        }
+        cin.clear();
+    }
+}
+
+void TaskList :: Menu(){
+    string input;
+    while(input != "q"){
+        cout << "MENU" << endl << endl;
+        cout << "[A]dd new task" << endl;
+        cout << "[R]emove task" << endl;
+        cout << "[P]rint list" << endl;
+        cout << "Print Task [D]escription" << endl;
+        cout << "[M]ark tasks as complete/incomplete" << endl;
+        cout << "Delete [C]omplete Tasks" << endl;
+        cout << "[Q]uit" << endl;
+        cout << "Input: ";
+        getline(cin, input);
+
+      if(input == "a"){//add
+            addToList();
+
+        }
+        else if (input == "r"){//remove
+            removeFromList();
+        }
+        else if (input == "p"){
+            printTask();
+        }
+        else if (input == "d"){//delete
+	    printDetails();
+        }
+        else if (input == "c"){
+            cin.clear();
+            string s = " ";
+            while((s != "y") || (s != "n")){
+                cout << "Are you sure you want to delete all completed tasks? (y/n)" << endl;
+                cin >> s;
+                if((s != "y") || (s != "n")){
+                    cout << "Please respond with 'y' or 'n'!" << endl;
+                }
+            }
+            if(s == "y"){
+                deleteCompleted();
+            }
+        }
+	else if (input == "M"){
+		setComplete();
+	}
     }
 } 

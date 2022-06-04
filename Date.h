@@ -18,7 +18,7 @@ void printDate();
 bool operator <(const Date& rhs);
 bool operator >(const Date& rhs);
 bool operator ==(const Date& rhs);
-void operator =(const Date& rhs)
+void operator =(const Date& rhs);
 
 private:
 int year;

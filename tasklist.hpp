@@ -5,12 +5,12 @@
 #include "task.h"
 #include <vector>
 
-class TaskList(){
+class TaskList{
     vector <Task*> list;
     void orderList();
 
     public:
-    void menu();
+    void Menu();
     void printList();
     void addToList();
     void removeFromList();
@@ -18,9 +18,10 @@ class TaskList(){
     void setCompleted();
     void printInOrder();
     void printIncomplete();
+    void printDetails();
 };
 
-
+#endif
 
 
 

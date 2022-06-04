@@ -18,8 +18,7 @@ class Task {
     Task();
     
     Task(string t, string des,Date d){title = t; description = des; date = d; done = false; priority = false;}
-    printTask();
-    virtual printsubTask() = 0;
+    void printTask();
 
     string getTitle();
     string getDescription();
@@ -38,7 +37,7 @@ class study:public Task{
     study();
     string getsubstudy();
     virtual void setsubinfo();
-    virtual printsubTask();
+    virtual void printsubTask();
     private:
     string cName;
 };
@@ -48,7 +47,7 @@ class business:public Task{
     business();
     string getsubbusiness();
     virtual void setsubbusiness();
-    virtual printsubTask();
+    virtual void printsubTask();
     private:
     string team;
 };
@@ -58,7 +57,9 @@ class appointment:public Task{
     appointment();
     string getsubappointment();
     virtual void setsubappointment();
-    virtual printsubTask();
+    virtual void printsubTask();
     private:
     string location;
 };
+
+#endif
