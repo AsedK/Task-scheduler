@@ -41,12 +41,11 @@ Description: The task scheduler will allow the user to input different tasks int
  
  ## Screenshots
  > Screenshots of the input/output after running your application
- > Unit Test
- > ![Screenshot 2022-06-06 143945](https://user-images.githubusercontent.com/102633438/172253818-3cdbc1e5-25ea-4f4c-9ddb-d056d3cd1b31.png)
  
 
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ >  ![Screenshot 2022-06-06 143945](https://user-images.githubusercontent.com/102633438/172253818-3cdbc1e5-25ea-4f4c-9ddb-d056d3cd1b31.png)
  
