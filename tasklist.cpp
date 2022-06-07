@@ -1,5 +1,6 @@
 #include "tasklist.hpp"
 #include <string>
+#include <sstream>
 #include <vector>
 
 void TaskList :: orderList(){
@@ -19,6 +20,7 @@ void TaskList :: orderList(){
 void TaskList :: printList(){
     if(list.size() == 0){
         cout << "No tasks available." << endl;
+        cin.clear();
         return;
     }
     cout << "PRIORITY TASKS" << endl << endl;
@@ -82,6 +84,8 @@ void TaskList :: printChoice(){
 void TaskList :: printIncomplete(){
     if(list.size() == 0){
         cout << "No tasks available." << endl;
+        cin.clear();
+        cin.ignore();
         return;
     }
     cout << "PRIORITY TASKS" << endl << endl;
@@ -247,122 +251,87 @@ void TaskList::addToList(){
 
 void TaskList::removeFromList(){
     string r = " ";
-    while(r != "n"){
-        if(list.size() == 0){
-            cout << "List is empty, nothing to remove." << endl;
-            return;
-        }
-        int num = 0;
-        printInOrder();
-        while ((num > list.size()) || (num <= 0)){
-            cout << endl << "Which task would you like to remove?" << endl;
-            cin >> num;
-            if((num <= 0) || (num > list.size())){
-                cout << num << " is not within the values alotted, try again." << endl;
-            }
-            cin.clear();
-        }
-        list.erase(list.begin() + num - 1);
-        cout << "Item #" << num << " deleted" << endl;
-        cout << "Would you like to remove another task? (y/n)" << endl;
-        cin >> r;
-        if(r == "y"){
-            cout << "Printing tasks..." << endl;
+    int num = 0;
+    printInOrder();
+    while ((num > list.size()) || (num <= 0)){
+        cout << endl << "Which task would you like to remove?" << endl;
+        cin >> num;
+        if((num <= 0) || (num > list.size())){
+            cout << num << " is not within the values alotted, try again." << endl;
         }
         cin.clear();
-        cin.ignore();
     }
+    list.erase(list.begin() + num - 1);
+    cout << "Item #" << num << " deleted" << endl;
+    cin.clear();
+    cin.ignore();
 }
 
 void TaskList :: setCompleted(){
     string r = " ";
     string y = " ";
-    while(r != "n"){
-        if(list.size() == 0){
-            cout << "List is empty, nothing to mark as completed." << endl;
-            return;
+    int num = 0;
+    printInOrder();
+    while ((num > list.size()) || (num <= 0)){
+        cout << endl << "Which task would you like to change?" << endl;
+        cin >> num;
+        if((num <= 0) || (num > list.size())){
+            cout << num << " is not within the values alotted, try again." << endl;
         }
-        int num = 0;
-        printInOrder();
-        while ((num > list.size()) || (num <= 0)){
-            cout << endl << "Which task would you like to change?" << endl;
-            cin >> num;
-            if((num <= 0) || (num > list.size())){
-                cout << num << " is not within the values alotted, try again." << endl;
-            }
-            cin.clear();
-        }
+        cin.clear();
+    }
 
-        while((y != "y") && (y != "n")){
-            cout << "This task is currently marked as ";
-            if(list.at(num - 1).isDone() == true){
-                cout <<  "complete" << endl;
-            }
-            else{
-                cout << "incomplete" << endl;
-            }
-
-            cout << "Would you like to mark it as ";
-            if(list.at(num - 1).isDone() == true){
-                cout << "incomplete? (y/n)" << endl;
-            }
-            else{
-                cout << "complete? (y/n)" << endl;
-            }
-            cin >> y;
-        }
-
-        if(y == "y"){
-            if(list.at(num - 1).isDone() == true){
-                list.at(num - 1).setDone(false);
-            }
-            else{
-                list.at(num - 1).setDone(true);
-            }
-        }
-        
-        cout << "Item #" << num << " marked as ";
+    while((y != "y") && (y != "n")){
+        cout << "This task is currently marked as ";
         if(list.at(num - 1).isDone() == true){
-            cout << "complete" << endl;
+            cout <<  "complete" << endl;
         }
         else{
             cout << "incomplete" << endl;
         }
 
-        cout << "Would you like to mark another task as complete/incomplete? (y/n)" << endl;
-        cin >> r;
-        if(r == "y"){
-            cout << "Printing tasks..." << endl;
+        cout << "Would you like to mark it as ";
+        if(list.at(num - 1).isDone() == true){
+            cout << "incomplete? (y/n)" << endl;
         }
-        cin.clear();
+        else{
+            cout << "complete? (y/n)" << endl;
+        }
+        cin >> y;
+    }
+
+    if(y == "y"){
+        if(list.at(num - 1).isDone() == true){
+            list.at(num - 1).setDone(false);
+        }
+        else{
+            list.at(num - 1).setDone(true);
+        }
+    }
+    
+    cout << "Item #" << num << " marked as ";
+    if(list.at(num - 1).isDone() == true){
+        cout << "complete" << endl;
+    }
+    else{
+        cout << "incomplete" << endl;
     }
 }
 
 void TaskList :: printDescription(){
     string r = " ";
-    while(r != "n"){
-        if(list.size() == 0){
-            cout << "List is empty, nothing to print." << endl;
-            return;
-        }
-        int num = 0;
-        printInOrder();
-        while ((num > list.size()) || (num <= 0)){
-            cout << endl << "Which task's description would you like to print?" << endl;
-            cin >> num;
-            if((num <= 0) || (num > list.size())){
-                cout << num << " is not within the values alotted, try again." << endl;
-            }
-            cin.clear();
-        }
-        cout << "Description: " << list.at(num - 1).getDescription() << endl;
-        cout << "Would you like to print another task's description? (y/n)" << endl;
-        cin >> r;
-        if(r == "y"){
-            cout << "Printing tasks..." << endl;
+    int num = 0;
+    printInOrder();
+    while ((num > list.size()) || (num <= 0)){
+        cout << endl << "Which task's description would you like to print?" << endl;
+        cin >> num;
+        if((num <= 0) || (num > list.size())){
+            cout << num << " is not within the values alotted, try again." << endl;
         }
         cin.clear();
     }
+    cout << "Description: " << list.at(num - 1).getDescription() << endl;
+    cin.clear();
 }
 
 void TaskList :: Menu(){
@@ -381,16 +350,22 @@ void TaskList :: Menu(){
 
       if(input == "a"){//add
             addToList();
-
         }
         else if (input == "r"){//remove
-            removeFromList();
+            if(list.size() == 0){
+                cout << "Nothing to remove. Please press enter.";
+            }    
+            else{removeFromList();}   
         }
         else if (input == "p"){
             printChoice();
         }
-        else if (input == "d"){//delete
-	    printDescription();
+        else if (input == "d"){//description
+            if(list.size() == 0){
+                cout << "Nothing to print. Please press enter.";
+            }
+            
+	        else{printDescription();}
         }
         else if (input == "c"){
             cin.clear();
@@ -407,8 +382,15 @@ void TaskList :: Menu(){
             }
         }
 	else if (input == "m"){
-		setCompleted();
+        if(list.size() == 0){
+            cout << "Nothing to change. Please press enter.";
+            } 
+		else{setCompleted();}
+	}
+	else if (input == "q"){
+	    return;
 	}
 	cin.clear();
+	cin.ignore();
     }
 } 

@@ -6,15 +6,15 @@ Date::Date(){
     day = 0;
 }
 
-Date::getday(){
+int Date::getday(){
     return day;
 }
 
-Date::getmonth(){
+int Date::getmonth(){
     return month;
 }
 
-Date::getyear(){
+int Date::getyear(){
     return year;
 }
 
@@ -31,7 +31,7 @@ void Date::setday(int d){
 }
 
 void Date::printDate(){
-    cout<<"Date: " << getmonth() << "/" << getday() << "/" << getyear() << endl; 
+    cout << getmonth() << "/" << getday() << "/" << getyear() << endl; 
 }
 
 bool Date::operator <(const Date& rhs){
@@ -42,7 +42,7 @@ bool Date::operator <(const Date& rhs){
         return true;
     }
     if(year == rhs.year && month == rhs.month && day < rhs.day){
-        return true
+        return true;
     }
     return false;
 }
@@ -54,18 +54,18 @@ bool Date::operator >(const Date& rhs){
         return true;
     }
     if(year == rhs.year && month == rhs.month && day > rhs.day){
-        return true
+        return true;
     }
     return false;
 }
-bool Date::operator ==(const Date& rhs){
-    if(year == rhs.year && month == rhs.month && day = rhs.day){
-        return true
+bool Date::operator==(const Date& rhs){
+    if(year == rhs.year && month == rhs.month && day == rhs.day){
+        return true;
     }
     return false;
 }
 
-void Date::operator =(const Date rhs){
+void Date::operator=(const Date& rhs){
     this->year = rhs.year;
     this->month = rhs.month;
     this->day = rhs.day;

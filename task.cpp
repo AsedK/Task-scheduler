@@ -99,4 +99,3 @@ void Task::operator =(const Task in){
     priority = in.priority;
     type = in.type;
 }
-
