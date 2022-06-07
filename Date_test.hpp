@@ -55,7 +55,7 @@ TEST(DateTest, CommonInput){
 TEST(DateTest, CompareEmpty){
   Date D1;
   Date D2;
-  EXPECT_TRUE(D1=D2);
+  EXPECT_TRUE(D1==D2);
 }
 
 
@@ -89,7 +89,7 @@ TEST(DateTest, CompareSameInput){
   D2.setmonth(06);
   D2.setday(1);
   D2.setyear(2022);
-  EXPECT_TRUE(D1=D2);
+  EXPECT_TRUE(D1==D2);
 }
 
 TEST(DateTest, CompareD1Input){
