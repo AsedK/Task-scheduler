@@ -14,6 +14,22 @@ Description: The task scheduler will allow the user to input different tasks int
  Fixing unexpected errors \
  **The item “Task 1” has now been added to “doing” section**
 
+## screenshots of input and output
+Adding a new task
+
+![image](https://user-images.githubusercontent.com/99304188/172476135-7bd0e89d-213a-49d7-b00b-9bb2018f9d8a.png)
+Printing out all tasks 
+![image](https://user-images.githubusercontent.com/99304188/172476274-bde533c4-ce71-4905-8208-6dad0f057944.png)
+e=Error message if there are no tasks to print 
+![image](https://user-images.githubusercontent.com/99304188/172476401-f60e9fe4-7b50-452d-9dc4-0841d637c6f6.png)
+Deleting/completing all tasks
+![image](https://user-images.githubusercontent.com/99304188/172476479-d9c2f67f-26ec-4ef7-9a0a-1c051456d892.png)
+Print out description 
+![image](https://user-images.githubusercontent.com/99304188/172476566-202b9235-11cd-4e19-92cb-26845b003c0f.png)
+Removing tasks
+![image](https://user-images.githubusercontent.com/99304188/172476647-11638cff-1491-4709-84c3-3ea972550ed6.png)
+Mark task as completed 
+![image](https://user-images.githubusercontent.com/99304188/172476693-1f341d30-71b0-4fb5-bfc0-1ae1ee3f63bf.png)
 
 
 ## Class Diagram
