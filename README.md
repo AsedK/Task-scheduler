@@ -17,16 +17,11 @@ Description: The task scheduler will allow the user to input different tasks int
 
 
 ## Class Diagram
- ![Blank diagram](https://user-images.githubusercontent.com/59095877/166174127-325d1f8e-fdf1-4162-b02f-56f9a86a6059.png)
+ ![Blank diagram](https://user-images.githubusercontent.com/59095877/168517340-02cf8e7b-d29d-4618-ad97-2ad2776405c1.png)
  Description: The task list class is an aggregator for tasks, and has the functions of printing a menu for the user to interact with, adding/removing tasks from a  list, and printing the task list in order of date/if it's an extremely important task. The task class contains the public data members of title, details, date, done, top priority, and the next and previous task nodes. Title is the title of the task, details is the specific information of that task (can be left blank), date is the day that the task is due/happening, done is regarding whether or not the task is complete, top priority entails whether or not the task is extremely important (top priority is printed first in list), next and previous nodes are pointing to the nodes before and after the current task. (next and prev used for ordering) There are three subclasses, consisting of appointments, assignments/tests, and work-related tasks. Appointments has the extra member of type, relating to the kind of appointment (ex: Doctor's, insurance, dentist, etcetera). Study has the member of class which would show the class that the assignment or test was for in order to prioritize study or work for that particular class. (different from details as it would be shown earlier to allow for easier access for students) Work has the member of team in order to show what team has that particular task nd allows for the organizing of tasks by team. Final class included is a date class in order to compare dates and allow for prioritization by due date.
  >  
  > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- > * Before the meeting you should perform a sprint plan like you did in Phase II.
- > * You should also update this README file by adding the following:
- >   * What design pattern(s) did you use? For each pattern you must explain in 4-5 sentences:
- >     * Why did you pick this pattern? And what feature did you implement with it?
- >     * How did the design pattern help you write better code?
+ > For this project, we have decided to use strategic design as it falls more in line with our task manager project. This was mostly due to the fact that our task manager has subtasks that are used to signify between specific types of tasks in order to give variety. The task list serves as the context interface as it gives the user the menu and ability to interact with the individual task nodes. The class of task serves as a strategy, which the three subclassess derive from in order to specify what they are. The subclasses of appointments, assignments, and work serve as concrete strategies, specifying what the task is for as well as its general purpose and the additional data along with it. This design pattern allowed us to create a more specific set of tasks and the ability for the task manager to be used in more contexts.
  >   * An updated class diagram that reflects the design pattern(s) you used. You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description).
  >   * Make sure your README file (and Project board) are up-to-date reflecting the current status of your project. Previous versions of the README file should still be visible through your commit history.
 > 
@@ -52,4 +47,5 @@ Description: The task scheduler will allow the user to input different tasks int
  > Instructions on installing and running your application
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+ >  ![Screenshot 2022-06-06 143945](https://user-images.githubusercontent.com/102633438/172253818-3cdbc1e5-25ea-4f4c-9ddb-d056d3cd1b31.png)
+ >. <img width="1052" alt="Screen Shot 2022-06-06 at 3 16 24 PM" src="https://user-images.githubusercontent.com/101161452/172258336-f27310f6-0203-4eff-b3a1-87647287d910.png">
