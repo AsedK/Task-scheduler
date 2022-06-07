@@ -16,8 +16,6 @@ void Task::printTask(){
     cout << "Date: ";
     this->date.printDate();
     cout << endl;
-    cout << "done: " << isDone() << endl;
-    cout << "priority: " <<getPriority() << endl;
     if(type == 2){
         cout << "Appointment location: " << info << endl;
     }
@@ -27,6 +25,22 @@ void Task::printTask(){
     if(type == 4){
         cout << "Team number/name: " << info << endl;
     }
+    cout << "done: ";
+    if(done == false){
+        cout << "no";
+    }
+    else if(done == true){
+        cout << "yes";
+    }
+    cout << endl;
+    cout << "priority: ";
+    if(priority == true){
+        cout << "yes";
+    }
+    else{
+        cout << "no";
+    }
+    cout << endl;
 }
 
 void Task::setDate(Date d){
