@@ -6,11 +6,12 @@
 #include <vector>
 
 class TaskList{
-    vector <Task*> list;
+    vector <Task> list;
     void orderList();
 
     public:
     void Menu();
+    void printChoice();
     void printList();
     void addToList();
     void removeFromList();
@@ -18,7 +19,7 @@ class TaskList{
     void setCompleted();
     void printInOrder();
     void printIncomplete();
-    void printDetails();
+    void printDescription();
 };
 
 #endif

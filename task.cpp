@@ -1,56 +1,68 @@
-
 #include "task.h"
-#include<string>
 
 using namespace std;
 
 Task::Task(){
-    title = "none";
-    details = "none";
-    description = "";
+    title = " ";
+    description = " ";
     done = false;
     priority = false;
-    date = 0;
-    next = nullptr;
-    
+    info = " ";
+    type = 0;
+}
+void Task::printTask(){
+    cout << "Task title: " << getTitle()<< endl;
+    cout << "Description: " << getDescription() << endl;
+    cout << "Date: ";
+    this->date.printDate();
+    cout << endl;
+    cout << "done: " << isDone() << endl;
+    cout << "priority: " <<getPriority() << endl;
+    if(type == 2){
+        cout << "Appointment location: " << info << endl;
+    }
+    if(type == 3){
+        cout << "Class name: " << info << endl;
+    }
+    if(type == 4){
+        cout << "Team number/name: " << info << endl;
+    }
 }
 
-
-void Task::printTask(std::ostream& out){
-    out << "Task title: " << getTitle()<< endl;
-    out << "details: " << getDetails() << endl;
-    out << "Date: " << getDate() << endl;
-    out << "Description: " << getDescription() << endl;
-    out << "done: " << isDone() << endl;
-    out << "priority: " <<getPriority() << endl;
+void Task::setDate(Date d){
+    date = d;
 }
 
 string Task::getTitle(){
     return title;
 }
 
-string Task::getDetails(){
-    return details;
-}
-
-int Task::getDate(){
+Date Task::getDate(){
     return date;
 }
 
-string  Task::getDescription(){
+string Task::getDescription(){
     return description;
+}
+
+void Task::setInfo(string i){
+    info = i;
 }
 
 void Task::setDescription(string str){
     this->description = str;
 }
 
-void  Task::setDetails(string str){
-    this->details = str;
+void Task::setType(int t){
+    type = t;
 }
 
 void Task::setTitle(string str){
     this->title = str;
+}
+
+void Task::setDone(bool d){
+    done = d;
 }
 
 bool Task::isDone(){
@@ -61,54 +73,16 @@ bool Task::getPriority(){
     return priority;
 }
 
-void  Task::setPriority(){
-    this->priority = true;
+void Task::setPriority(bool b){
+    priority = b;
 }
 
-
-subTask::subTask(){
-    study = " ";
+void Task::operator =(const Task in){
+    title = in.title;
+    description = in.description;
+    date = in.date;
+    done = in.done;
+    priority = in.priority;
+    type = in.type;
 }
 
-string subTask::getsubstudy(){
-   return study;
-   
-}
-
-void subTask::setsubstudy(string slist1){
-    study = slist1;
-}
-void subTask::printsubTask(){
-    cout << getsubstudy() <<" for study" << endl;
-}
-subTask2::subTask2(){
-    business = " ";
-}
-
-string subTask2::getsubbusiness(){
-    return business;
-}
-
-void subTask2::setsubbusiness(string slist2){
-    business = slist2;
-}
-
-void  subTask2::printsubTask(){
-    cout << getsubbusiness() <<" for business" << endl;
-}
-subTask3::subTask3(){
-    appointment = " ";
-}
-
-string subTask3::getsubappointment(){
-    return appointment;
-}
-
-void subTask3::setsubappointment(string slist3){
-    appointment = slist3;
-}
-
-
-void  subTask3::printsubTask(){
-    cout << getsubappointment() <<" for appointment" << endl;
-}
