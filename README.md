@@ -40,9 +40,8 @@ Note: This represents what we wanted to accomplish (left) vs what was accomplish
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ > Screenshots of the input/output after running your application \
  Adding a new task
-
 ![image](https://user-images.githubusercontent.com/99304188/172476135-7bd0e89d-213a-49d7-b00b-9bb2018f9d8a.png)
 Printing out all tasks 
 ![image](https://user-images.githubusercontent.com/99304188/172476274-bde533c4-ce71-4905-8208-6dad0f057944.png)
