@@ -8,51 +8,50 @@
 #include<iostream>
 
 TEST(TaskTest, emptyTask){
-   subTask test;
+   Task test;
    
    std::stringstream out("");
    test.printTask(out);
    
-   EXPECT_EQ(out.str(), "Task title: none\ndetails: none\nDate: 0\nDescription: \ndone: 0\npriority: 0\n");
+   EXPECT_EQ(out.str(), "Task title: none\nDate: 0/0/0\nDescription: \ndone: no\npriority: no\n");
 }
 
 TEST(TaskTest, Task){
-   subTask test;
-   
+   Task test;
+   test.setType(3);
    test.setTitle("Homework");
-   test.setDetails("MathHomework");
    test.setDescription("It will take 15min");
-   test.setPriority();
+   test.setPriority(true);
    
    std::stringstream out("");
    test.printTask(out);
 
-   EXPECT_EQ(out.str(),"Task title: Homework\ndetails: MathHomework\nDate: 0\nDescription: It will take 15min\ndone: 0\npriority: 1\n" ); 
+   EXPECT_EQ(out.str(),"Task title: Homework\nDate: 0\nDescription: It will take 15min\ndone: no\npriority: no" ); 
 }
 
 
 TEST(TaskTest, Taskwithstudy){
-   subTask test;
+   task test;
    
-   test.setsubstudy("general Math");
+   test.setinfo("general Math");
   
-   EXPECT_EQ(test.getsubstudy(), "general Math");
+   EXPECT_EQ(test.getInfo(), "general Math");
 }
 
 TEST(TaskTest, Taskwithbusiness){
-   subTask2 test;
+   Task test;
    
-   test.setsubbusiness("Scrum");
+   test.setInfo("Scrum");
    
-   EXPECT_EQ(test.getsubbusiness(), "Scrum");
+   EXPECT_EQ(test.getInfo(), "Scrum");
 }
 
 TEST(TaskTest, Taskwithappointment){
-   subTask3 test;
+   Task test;
 
-   test.setsubappointment("Dentist");
+   test.setInfo("Dentist");
 
-   EXPECT_EQ(test.getsubappointment(), "Dentist");
+   EXPECT_EQ(test.getInfo(), "Dentist");
 }
 
 #endif
