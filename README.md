@@ -44,7 +44,7 @@ Description: The task scheduler will allow the user to input different tasks int
  
 
  ## Installation/Usage
- > Instructions on installing and running your application
+ > There are no special instructions for using the application, please install all files and follow the menus to create your task list! If using through linux, run 'cmake3 .', make, and ./tasklist!
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  >  ![Screenshot 2022-06-06 143945](https://user-images.githubusercontent.com/102633438/172253818-3cdbc1e5-25ea-4f4c-9ddb-d056d3cd1b31.png)
