@@ -15,7 +15,10 @@ void setyear(int y);
 void setmonth(int m);
 void setday(int d);
 void printDate();
-compareDate(Date);
+bool operator <(const Date& rhs);
+bool operator >(const Date& rhs);
+bool operator ==(const Date& rhs);
+void operator =(const Date& rhs);
 
 private:
 int year;

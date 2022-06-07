@@ -34,6 +34,39 @@ void Date::printDate(){
     cout<<"Date: " << getmonth() << "/" << getday() << "/" << getyear() << endl; 
 }
 
-Date::compareDate(){
+bool Date::operator <(const Date& rhs){
+    if(year < rhs.year){
+        return true;
+    }
+    if(year == rhs.year && month < rhs.month){
+        return true;
+    }
+    if(year == rhs.year && month == rhs.month && day < rhs.day){
+        return true
+    }
+    return false;
+}
+bool Date::operator >(const Date& rhs){
+    if(year > rhs.year){
+        return true;
+    }
+    if(year == rhs.year && month > rhs.month){
+        return true;
+    }
+    if(year == rhs.year && month == rhs.month && day > rhs.day){
+        return true
+    }
+    return false;
+}
+bool Date::operator ==(const Date& rhs){
+    if(year == rhs.year && month == rhs.month && day = rhs.day){
+        return true
+    }
+    return false;
+}
 
+void Date::operator =(const Date rhs){
+    this->year = rhs.year;
+    this->month = rhs.month;
+    this->day = rhs.day;
 }
